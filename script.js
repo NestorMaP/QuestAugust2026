@@ -4,12 +4,28 @@
 const CONFIG = {
   // Palabra clave para entrar a la página. Déjala en null para desactivar
   // la puerta de entrada por completo (la página se ve directamente).
-  passphrase: "ORDINO26", // no distingue mayúsculas/minúsculas
+  passphrase: "NERO", // no distingue mayúsculas/minúsculas
 
   // Mensaje que aparece al completar las 3 fotos del quest.
-  rewardTitle: "Ya casi lo tienes…",
-  rewardText: "Cuando termines, pídeme el regalo — ya sabes dónde encontrarme."
+  rewardTitle: "Ya es prácticamente tuyo…",
+  rewardText: "Ahora solo tienes que darme un beso y cerrar los ojos",
+
+  // Si es true, las fotos subidas se recuerdan entre recargas de página
+  // (guardadas solo en este dispositivo, vía localStorage). Si es false
+  // (por defecto, para hacer pruebas), cada recarga borra el progreso y
+  // hay que volver a subir las fotos.
+  persistPhotos: false
 };
+
+// Limpieza de fotos guardadas en pruebas anteriores (de cuando
+// persistPhotos estaba activo). Se ejecuta una sola vez.
+(function cleanupOldPhotos(){
+  try {
+    Object.keys(localStorage)
+      .filter(function(k){ return k.indexOf('andorra-quest-photo-') === 0; })
+      .forEach(function(k){ localStorage.removeItem(k); });
+  } catch (e) { /* localStorage no disponible, se ignora */ }
+})();
 
 /* ==========================================================================
    Puerta de entrada
@@ -101,14 +117,16 @@ const CONFIG = {
     }
   }
 
-  // Restaurar progreso guardado (mismo dispositivo/navegador)
-  slots.forEach(function(slot){
-    const n = slot.getAttribute('data-slot');
-    try {
-      const saved = localStorage.getItem(storageKey(n));
-      if (saved) markDone(slot, saved);
-    } catch (e) { /* localStorage no disponible, se ignora */ }
-  });
+  // Restaurar progreso guardado (solo si persistPhotos está activo)
+  if (CONFIG.persistPhotos) {
+    slots.forEach(function(slot){
+      const n = slot.getAttribute('data-slot');
+      try {
+        const saved = localStorage.getItem(storageKey(n));
+        if (saved) markDone(slot, saved);
+      } catch (e) { /* localStorage no disponible, se ignora */ }
+    });
+  }
   updateProgress();
 
   // Escuchar subidas nuevas
@@ -122,7 +140,9 @@ const CONFIG = {
       reader.onload = function(e){
         const dataUrl = e.target.result;
         markDone(slot, dataUrl);
-        try { localStorage.setItem(storageKey(n), dataUrl); } catch (e) { /* cuota superada, se ignora */ }
+        if (CONFIG.persistPhotos) {
+          try { localStorage.setItem(storageKey(n), dataUrl); } catch (e) { /* cuota superada, se ignora */ }
+        }
         updateProgress();
       };
       reader.readAsDataURL(file);

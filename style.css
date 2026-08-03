@@ -479,8 +479,57 @@ footer{
 
 /* ---------- Responsive ---------- */
 @media (max-width: 640px){
-  .hero-inner{ padding-top: 100px; }
-  section{ padding: 52px 0; }
+  :root{ --trail-x: 14px; }
+
+  .wrap{ padding: 0 18px; }
+
+  .hero{ min-height: 92vh; }
+  .hero-inner{ padding: 88px 18px 48px; }
+  .hero-sun{ width: 90px; height:90px; top: 9%; }
+  .hero-note{ font-size: 0.98rem; }
+
+  section{ padding: 48px 0; }
+  .section-head{ margin-bottom: 28px; }
+
+  .trail{ padding-left: calc(var(--trail-x) + 16px); }
+  .waypoint::before{
+    left: calc(-1 * (var(--trail-x) + 16px) + var(--trail-x) - 6px);
+    width: 13px; height: 13px;
+  }
+  .waypoint{ padding-bottom: 34px; }
+  .day-label{ margin-left: calc(-1 * (var(--trail-x) + 16px) + 2px); }
+
+  .card-grid{ grid-template-columns: 1fr; gap: 14px; }
+  .card{ padding: 18px; }
+
   .route-strip{ flex-direction:column; }
-  .route-arrow{ transform: rotate(90deg); padding: 6px 0; }
+  .route-node{ padding: 14px 4px; }
+  .route-arrow{ transform: rotate(90deg); padding: 2px 0; }
+
+  .resto{ flex-direction: column; gap: 4px; }
+  .resto-price{ font-size: 0.8rem; }
+
+  .quest-grid{ grid-template-columns: 1fr; gap: 16px; max-width: 360px; }
+  .quest-head{ padding: 0 4px; }
+
+  .gate-card{ padding: 0 6px; }
+  #gate-form{ flex-direction: column; }
+  #gate-form button{ padding: 12px; }
+}
+
+@media (max-width: 380px){
+  h1{ font-size: 2.15rem; }
+  .hero-dates{ font-size: 0.85rem; }
+}
+
+/* Comfortable tap targets on touch devices */
+@media (pointer: coarse){
+  .quest-slot label,
+  #gate-form button,
+  .hero-scroll{
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
 }

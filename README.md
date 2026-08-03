@@ -42,7 +42,7 @@ decir: cualquiera con el enlace puede verla.
 
 Para darle una capa mínima de intimidad, la página incluye una "puerta de
 entrada" con contraseña (ver `CONFIG.passphrase` en `script.js`, por
-defecto `ORDINO26`). No es seguridad real — solo evita que alguien que
+defecto `NERO`). No es seguridad real — solo evita que alguien que
 tropiece con el enlace por casualidad vea la sorpresa. Si no la quieres,
 pon `passphrase: null` en `script.js` y desaparece.
 
@@ -54,12 +54,20 @@ perfil de GitHub.
 
 - **Contraseña de entrada y mensaje del regalo**: al principio de
   `script.js`, en el objeto `CONFIG`.
-- **Textos del itinerario, restaurantes, horarios**: directamente en
-  `index.html`, todo está en español plano y comentado por secciones.
+- **Textos del itinerario, restaurantes, horarios, guía turística**:
+  directamente en `index.html`, todo está en español plano y comentado
+  por secciones.
 - **Fotos del quest**: los 3 lugares propuestos son Casa de la Vall, la
   iglesia de La Cortinada y la Ruta del Hierro — puedes cambiarlos por
   otros editando los `<h4>` y `.hint` de cada `.quest-slot` en
   `index.html`.
+- **Persistencia de las fotos del quest**: por defecto, `CONFIG.persistPhotos`
+  está en `false` — cada vez que se recarga la página hay que volver a
+  subir las fotos (útil para hacer pruebas). Si el día del viaje quieres
+  que el progreso se recuerde en el móvil de tu novia entre recargas,
+  cambia `persistPhotos` a `true` en `script.js`. Las fotos nunca se
+  suben a ningún servidor en ningún caso: solo se guardan (o no) en el
+  propio dispositivo.
 - **Colores**: variables CSS al principio de `style.css` (`:root`).
 
 ## Cosas para revisar antes del viaje
