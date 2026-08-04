@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#10241a">
-<title>Andorra te espera</title>
+<title>Aventura</title>
 <meta name="description" content="Una escapada sorpresa a Andorra, 21–23 de agosto.">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -25,7 +25,7 @@
 </div>
 
 <!-- ============ HERO ============ -->
-<header class="hero">
+<header class="hero" id="hero">
   <svg class="hero-ridges" viewBox="0 0 1200 500" preserveAspectRatio="none" aria-hidden="true">
     <polygon points="0,500 0,320 150,260 320,340 480,230 650,310 820,210 1000,300 1200,240 1200,500" fill="#2c5744" opacity="0.55"/>
     <polygon points="0,500 0,380 200,330 380,400 560,310 760,390 950,320 1200,380 1200,500" fill="#163629" opacity="0.85"/>
@@ -33,11 +33,14 @@
   </svg>
   <div class="hero-sun"></div>
   <div class="hero-inner">
-    <p class="eyebrow">Una escapada sorpresa</p>
+    <p class="eyebrow">Una pequeña aventura</p>
     <h1>Nos vamos a<br><em>Andorra</em></h1>
     <p class="hero-dates">21 → 23 AGO 2026 · Valencia → Andorra la Vella</p>
     <p class="hero-note">Tres días entre montañas: carretera con vistas, turismo cultural, aguas termales de noche y una ruta a pie que no exige más que ganas de mirar alrededor.</p>
-    <a href="#ruta" class="hero-scroll">↓ Ver el plan completo</a>
+    <a href="#ruta" class="hero-scroll">↓ Ver el plan completo</a><br>
+    <a href="#itinerary" class="hero-scroll">↓ Ver itinerario detallado</a><br>
+    <a href="#restaurants" class="hero-scroll">↓ Ver restaurantes</a><br>
+    <a href="#quest" class="hero-scroll">↓ Ver la misión</a>
   </div>
 </header>
 
@@ -131,7 +134,7 @@
 </svg>
 
 <!-- ============ INFO PRÁCTICA ============ -->
-<section class="pine-section">
+<section id="itinerary" class="pine-section">
   <div class="wrap">
 
     <div class="section-head">
@@ -255,7 +258,7 @@
         <p>Mirador y plaza sobre el aparcamiento comunal, buen sitio para sentarse un rato con vistas al valle.</p>
       </div>
     </div>
-    <p class="callout">Nota: si dejáis Casa de la Vall para el sábado, esta tarde es un paseo tranquilo sin hora fija.</p>
+    <p class="callout">Nota: si dejamos Casa de la Vall para el sábado, esta tarde es un paseo tranquilo sin hora fija.</p>
 
     <h3 style="margin-top:48px;">Sábado tarde · Escaldes-Engordany</h3>
     <div class="card-grid">
@@ -289,38 +292,38 @@
   <polygon points="0,64 0,30 200,50 420,10 650,45 880,20 1100,48 1200,25 1200,64" fill="var(--parchment, #f6f1e4)"/>
 </svg>
 
-<!-- ============ RESTAURANTES ============ -->
-<section>
+<!-- ============ GASTRONOMIA ============ -->
+<section id="restaurants">
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow">Por libre</p>
-      <h2>Dónde cenar</h2>
-      <p>Opciones en Andorra la Vella, entre 20 € y 30 € por persona — a mano tanto la tarde del viernes como la del sábado. Vale la pena reservar, sobre todo en agosto.</p>
+      <h2>Dónde comer o merendar</h2>
+      <p>Opciones tanto en Andorra la Vella como cerca del hotel, entre 20 € y 30 € por persona — a mano tanto la tarde del viernes como la del sábado.</p>
     </div>
     <div class="resto-list">
       <div class="resto">
         <div>
           <div class="resto-name">Minim's</div>
-          <div class="resto-desc">Escondido en una placeta del Barri Antic. Cocina típica andorrana en formato pequeño y con encanto — los sábados sacan menú degustación con todas las especialidades de la casa. Solo 30 plazas: reservar es casi obligatorio.</div>
+          <div class="resto-desc">Escondido en una placeta del Barri Antic. Cocina típica andorrana en formato pequeño y con encanto — los sábados sacan menú degustación con todas las especialidades de la casa. Solo 30 plazas: <em>YA RESERVADO</em></div>
         </div>
-        <div class="resto-price">15 € entre semana · 25 € sábados</div>
+        <div class="resto-price">27 €</div>
       </div>
       <div class="resto">
         <div>
-          <div class="resto-name">La Borda Pairal 1630</div>
-          <div class="resto-desc">Borda histórica en pleno centro. Especialidad en carnes a la brasa, caracoles a la llauna y platos de toda la vida.</div>
+          <div class="resto-name">Restaurant Cal Tonet</div>
+          <div class="resto-desc">Restaurante justo al lado del hotel con cocina tradicional (tienen crema catalana).</div>
         </div>
-        <div class="resto-price">≈ 20–30 €</div>
+        <div class="resto-price">≈ 10–20 €</div>
       </div>
       <div class="resto">
         <div>
-          <div class="resto-name">Borda Estevet</div>
-          <div class="resto-desc">Clásico de Andorra la Vella, a un paseo de Casa de la Vall. Antiguo pajar con chimenea, carnes a la brasa muy valoradas — puede irse algo por encima de los 30 € si se pide a la carta.</div>
+          <div class="resto-name">Brulèe 2.0</div>
+          <div class="resto-desc">Pastelería y bollería artesana selecta. Situado muy cerca del hotel, buena opción de desayuno / merienda.</div>
         </div>
-        <div class="resto-price">≈ 25–30 €</div>
+        <div class="resto-price">≈ 5–10 €</div>
       </div>
     </div>
-    <p class="callout">Precios orientativos de menú por persona</p>
+    <p class="callout">Aunque ya haya una reserva, se puede cancelar y optar por algo más tradicional.</p>
   </div>
 </section>
 
@@ -329,9 +332,11 @@
 <section class="quest-section" id="quest">
   <div class="wrap">
     <div class="quest-head">
-      <p class="eyebrow">Antes del regalo</p>
-      <h2>Encuentra 3 rincones del valle</h2>
-      <p>Durante el viaje, haz una foto en cada uno de estos lugares y súbela aquí. Cuando estén las tres, podrás recuperar mi tesoro.</p>
+      <p class="eyebrow">Para tener la sabiduría necesaria y poder ser la protectora de mi tesoro...</p>
+      <h2>Encuentra 3 rincones mágicos</h2>
+      <p>Durante el viaje, haz una foto en cada uno de estos lugares y súbela aquí.</p>
+      <p>Apóyate en mi brazo largo con 3 patitas ya que deberá ser una foto en pareja.</p>
+      <p>Cuando estén las tres, podrás recuperar mi tesoro.</p>
     </div>
 
     <div class="quest-grid" id="quest-grid">
@@ -344,20 +349,20 @@
         <input type="file" id="file-1" accept="image/*" capture="environment">
       </div>
       <div class="quest-slot" data-slot="3">
-        <p class="qnum">03</p>
+        <p class="qnum">02</p>
         <h4>Ruta del Hierro</h4>
         <p class="hint">Una vista del valle desde el camino</p>
         <div class="quest-preview"><span class="placeholder-icon">⛰</span></div>
         <label for="file-3">Subir foto</label>
-        <input type="file" id="file-3" accept="image/*" capture="environment">
+        <input type="file" id="file-2" accept="image/*" capture="environment">
       </div>
       <div class="quest-slot" data-slot="2">
-        <p class="qnum">02</p>
-        <h4>Entrada al balneario Caldea</h4>
-        <p class="hint">La puerta de entrada al bonito balneario</p>
+        <p class="qnum">03</p>
+        <h4>La Noblesse du Temps</h4>
+        <p class="hint">Foto de la bonita estructura</p>
         <div class="quest-preview"><span class="placeholder-icon">⛰</span></div>
         <label for="file-2">Subir foto</label>
-        <input type="file" id="file-2" accept="image/*" capture="environment">
+        <input type="file" id="file-3" accept="image/*" capture="environment">
       </div>
     </div>
     
@@ -365,13 +370,15 @@
     <div class="quest-progress">
       <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
       <p class="progress-label" id="progress-label">0 / 3 encontrados</p>
+      <a href="#hero" class="hero-scroll">↑ Volver al inicio</a>
     </div>
 
     <div class="reward" id="reward">
       <p class="eyebrow">Desbloqueado</p>
-      <h3>Ya casi lo tienes…</h3>
-      <p>Cuando termines, pídeme el regalo — ya sabes dónde encontrarme.</p>
+      <h3>Ya es prácticamente tuyo…</h3>
+      <p>Ahora solo tienes que darme un beso y cerrar los ojos.</p>
     </div>
+
   </div>
 </section>
 

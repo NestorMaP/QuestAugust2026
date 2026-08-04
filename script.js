@@ -56,7 +56,7 @@ const CONFIG = {
       sessionStorage.setItem('andorra-gate-ok', '1');
       gate.classList.add('hidden');
     } else {
-      error.textContent = 'Esa no es la palabra correcta. Prueba otra vez.';
+      error.textContent = 'Ese no es el nombre de mi compi negro. Prueba otra vez.';
       input.value = '';
       input.focus();
     }
