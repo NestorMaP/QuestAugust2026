@@ -64,19 +64,7 @@ perfil de GitHub.
 - **Persistencia de las fotos del quest**: por defecto, `CONFIG.persistPhotos`
   está en `false` — cada vez que se recarga la página hay que volver a
   subir las fotos (útil para hacer pruebas). Si el día del viaje quieres
-  que el progreso se recuerde en el móvil de tu novia entre recargas,
-  cambia `persistPhotos` a `true` en `script.js`. Las fotos nunca se
-  suben a ningún servidor en ningún caso: solo se guardan (o no) en el
-  propio dispositivo.
+  que el progreso se recuerde, cambia `persistPhotos` a `true` en `script.js`.
+  Las fotos nunca se suben a ningún servidor en ningún caso:
+  solo se guardan (o no) en el propio dispositivo.
 - **Colores**: variables CSS al principio de `style.css` (`:root`).
-
-## Cosas para revisar antes del viaje
-
-- Confirmar horario y reserva de **Casa de la Vall** (visita guiada con
-  aforo limitado): https://www.casadelavall.ad/es/visites
-- Reservar mesa en el restaurante elegido para la cena, sobre todo en
-  temporada alta de agosto.
-- Revisar tráfico/obras el mismo día de salida antes de fijar las paradas
-  exactas de carretera.
-- El bono de Caldea es válido para el **día siguiente** al check-in del
-  hotel (22 de agosto) a las 22:00 — llevarlo impreso o en el móvil.
